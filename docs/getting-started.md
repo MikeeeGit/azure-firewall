@@ -18,6 +18,8 @@ Follow the [shared bootstrap guide](https://github.com/MikeeeGit/terraform-deliv
 
 ## Review and apply
 
+For the maintained Envoy/CSI path, merge the [platform egress profile](../examples/aks-platform/README.md) into the private hub target first. Helpers load only the two documented tfvars files; they do not discover that example layer. Preserve other approved rule groups when merging the full map. The [sandbox runbook](https://github.com/MikeeeGit/terraform-delivery-templates/blob/main/docs/azure/sandbox-deployment.md) covers the dependency and cleanup gates.
+
 With shared templates checked out alongside the private consumer:
 
 ```sh
