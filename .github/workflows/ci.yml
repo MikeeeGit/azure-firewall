@@ -1,0 +1,50 @@
+name: Terraform CI
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: terraform-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  terraform:
+    name: Terraform root
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    with:
+      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      directory: .
+      test-directory: tests
+  config-uks-hub:
+    name: Example uks/hub
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    with:
+      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      directory: .
+      test-directory: tests/targets
+      var-files: |
+        config/global.tfvars
+        config/uks/hub/hub.tfvars
+  config-ukw-hub:
+    name: Example ukw/hub
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    with:
+      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      directory: .
+      test-directory: tests/targets
+      var-files: |
+        config/global.tfvars
+        config/ukw/hub/hub.tfvars
+  cross-spoke-https:
+    name: Optional cross-spoke HTTPS
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    with:
+      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      directory: .
+      test-directory: tests/targets
+      var-files: |
+        config/global.tfvars
+        config/uks/hub/hub.tfvars
+        examples/cross-spoke-https.tfvars

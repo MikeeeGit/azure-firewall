@@ -1,0 +1,5 @@
+Azure Firewall
+Copyright 2026 Mike Flynn
+
+Derived from the author's reviewed AZ-TF-azurefirewall infrastructure configuration.
+Third-party Terraform providers retain their own licenses.
