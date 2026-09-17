@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add an explicit, tested Envoy image/CSI vault egress profile for the maintained dual-AKS ingress example.
+
 - Reconcile September source without importing estate allowlists; document non-circular DNS forwarding, independent upstream tests and rollback readiness.
 
 - Create a provisional standalone public firewall component from the reviewed archived root.

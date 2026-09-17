@@ -48,3 +48,14 @@ jobs:
         config/global.tfvars
         config/uks/hub/hub.tfvars
         examples/cross-spoke-https.tfvars
+  platform-egress:
+    name: Optional AKS platform egress
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    with:
+      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      directory: .
+      test-directory: tests/platform-egress
+      var-files: |
+        config/global.tfvars
+        config/uks/hub/hub.tfvars
+        examples/aks-platform/egress.tfvars

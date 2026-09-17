@@ -42,3 +42,12 @@ jobs:
         config/global.tfvars
         config/uks/hub/hub.tfvars
         examples/cross-spoke-https.tfvars
+  - template: azure-pipelines/jobs/terraform-validate.yml@deliveryTemplates
+    parameters:
+      jobName: platform_egress
+      directory: .
+      testDirectory: tests/platform-egress
+      varFiles: |
+        config/global.tfvars
+        config/uks/hub/hub.tfvars
+        examples/aks-platform/egress.tfvars
