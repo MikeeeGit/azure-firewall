@@ -1,6 +1,6 @@
 # Azure Firewall
 
-Provisional standalone public component derived from the reviewed `AZ-TF-azurefirewall` archive. The repository name is pending agreement; this local scaffold has not deployed Azure resources.
+Standalone public component derived from the reviewed `AZ-TF-azurefirewall` archive. The examples use synthetic inputs; live Azure deployment must be qualified in the chosen environment.
 
 This root deploys a VNet-based Azure Firewall and Standard public IP into an existing hub, with a base Firewall Policy inherited by a child policy. It retains ordered network/application rules, DNS proxy and custom DNS, non-SNAT ranges, threat-intelligence settings, zones, tags and useful outputs. Regional configuration remains separate from shared configuration.
 

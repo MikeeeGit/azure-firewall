@@ -4,4 +4,4 @@ This is Terraform deployment source. Keep changes focused and preserve resource 
 
 Use synthetic inputs and credential-free mocks. Never run cloud apply, change a backend, publish releases or expose private inputs merely to validate a code change. Do not commit `.terraform`, state, plans, credentials or private tfvars. Update provider locks intentionally; test the declared minimum provider in a disposable copy.
 
-Follow [the test guide](docs/testing.md) and [source provenance](docs/source-provenance.md). Public names remain provisional until the owner agrees them.
+Follow [the test guide](docs/testing.md) and [source provenance](docs/source-provenance.md). Keep published repository names and cross-repository links consistent.
