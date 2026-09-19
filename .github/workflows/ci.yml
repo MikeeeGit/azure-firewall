@@ -12,16 +12,16 @@ concurrency:
 jobs:
   terraform:
     name: Terraform root
-    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@281d779aced9c6e7da082b5e57c85639dc1858df
     with:
-      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      template-ref: 281d779aced9c6e7da082b5e57c85639dc1858df
       directory: .
       test-directory: tests
   config-uks-hub:
     name: Example uks/hub
-    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@281d779aced9c6e7da082b5e57c85639dc1858df
     with:
-      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      template-ref: 281d779aced9c6e7da082b5e57c85639dc1858df
       directory: .
       test-directory: tests/targets
       var-files: |
@@ -29,9 +29,9 @@ jobs:
         config/uks/hub/hub.tfvars
   config-ukw-hub:
     name: Example ukw/hub
-    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@281d779aced9c6e7da082b5e57c85639dc1858df
     with:
-      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      template-ref: 281d779aced9c6e7da082b5e57c85639dc1858df
       directory: .
       test-directory: tests/targets
       var-files: |
@@ -39,9 +39,9 @@ jobs:
         config/ukw/hub/hub.tfvars
   cross-spoke-https:
     name: Optional cross-spoke HTTPS
-    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@281d779aced9c6e7da082b5e57c85639dc1858df
     with:
-      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      template-ref: 281d779aced9c6e7da082b5e57c85639dc1858df
       directory: .
       test-directory: tests/targets
       var-files: |
@@ -50,9 +50,9 @@ jobs:
         examples/cross-spoke-https.tfvars
   platform-egress:
     name: Optional AKS platform egress
-    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+    uses: MikeeeGit/terraform-delivery-templates/.github/workflows/terraform-validate.yml@281d779aced9c6e7da082b5e57c85639dc1858df
     with:
-      template-ref: 472c0c5bebe7f07aca8c51c7fabf0a47280a0b25
+      template-ref: 281d779aced9c6e7da082b5e57c85639dc1858df
       directory: .
       test-directory: tests/platform-egress
       var-files: |
