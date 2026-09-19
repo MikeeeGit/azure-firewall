@@ -32,3 +32,7 @@ Constraints: Terraform `>= 1.9, < 2`, AzureRM `>= 4.33, < 5`. Reproducible CLI/p
 Standard and Premium VNet firewalls are supported. Basic management-subnet designs, Virtual WAN, DNAT, TLS inspection and IDPS configuration are not implemented by this component or the active archived root. A Premium SKU alone does not enable advanced inspection.
 
 Firewall and public IP resources incur charges. The single-IP example is a demonstration, not production SNAT sizing. Review current price, capacity, zones, monitoring and permitted traffic before deploying. Licensed under [Apache-2.0](LICENSE).
+
+## CI change scope
+
+Markdown-only edits use lightweight required GitHub checks and are excluded from automatic Azure validation builds. Changes to Terraform, application code, scripts, workflow definitions or executable examples still run full validation, including examples stored under docs/. Mixed changes also run full validation. Manual GitHub runs and unknown Git comparison ranges default to full validation.
